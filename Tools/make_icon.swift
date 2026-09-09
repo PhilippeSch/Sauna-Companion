@@ -3,10 +3,18 @@
 //   swift Tools/make_icon.swift light  out.png   full colour on the dark slate
 //   swift Tools/make_icon.swift dark   out.png   same artwork, transparent ground
 //   swift Tools/make_icon.swift tinted out.png   greyscale, transparent ground
+//   swift Tools/make_icon.swift watch  out.png   same artwork on warm birch
 //
-// watchOS and the iOS light appearance use `light`. The dark and tinted
-// variants deliberately omit the background: iOS composites its own behind
-// them, and a baked-in background is what makes a tinted icon look wrong.
+// The iOS light appearance uses `light`. The dark and tinted variants
+// deliberately omit the background: iOS composites its own behind them, and a
+// baked-in background is what makes a tinted icon look wrong.
+//
+// watchOS uses `watch`, which is `light` with the slate ground swapped for a
+// warm birch one and the artwork re-weighted to sit on it. watchOS masks the
+// icon into a circle and draws it on a black home screen, so the near-black
+// ground of `light` made the icon read as loose artwork floating in the void
+// rather than as a circle — which is what App Review rejected under
+// guideline 4.
 
 import Foundation
 import CoreGraphics
@@ -14,15 +22,18 @@ import ImageIO
 import UniformTypeIdentifiers
 
 enum Appearance: String {
-    case light, dark, tinted
+    case light, dark, tinted, watch
 
-    var drawsBackground: Bool { self == .light }
+    var drawsBackground: Bool { self == .light || self == .watch }
     var isGreyscale: Bool { self == .tinted }
+    /// True when the artwork sits on a light ground and has to be darkened
+    /// rather than lifted to keep its contrast.
+    var isLightGround: Bool { self == .watch }
 }
 
 let arguments = CommandLine.arguments
 guard arguments.count >= 3, let appearance = Appearance(rawValue: arguments[1]) else {
-    FileHandle.standardError.write(Data("usage: make_icon.swift <light|dark|tinted> <output.png>\n".utf8))
+    FileHandle.standardError.write(Data("usage: make_icon.swift <light|dark|tinted|watch> <output.png>\n".utf8))
     exit(1)
 }
 let outputPath = arguments[2]
@@ -52,10 +63,14 @@ ctx.translateBy(x: 0, y: W)
 ctx.scaleBy(x: 1, y: -1)
 
 // ---------- background ----------
-// Clean dark slate rather than a brown haze, so the orange reads as heat.
+// iOS: clean dark slate rather than a brown haze, so the orange reads as heat.
+// watchOS: warm birch instead, light enough that the circular mask is visible
+// against the black home screen.
 if appearance.drawsBackground {
     ctx.saveGState()
-    let bgColors = [rgb(46, 44, 52), rgb(24, 23, 28), rgb(13, 12, 15)] as CFArray
+    let bgColors = appearance.isLightGround
+        ? [rgb(255, 243, 223), rgb(246, 222, 186), rgb(232, 197, 145)] as CFArray
+        : [rgb(46, 44, 52), rgb(24, 23, 28), rgb(13, 12, 15)] as CFArray
     let bg = CGGradient(colorsSpace: cs, colors: bgColors, locations: [0, 0.55, 1])!
     ctx.drawLinearGradient(
         bg,
@@ -70,9 +85,14 @@ if appearance.drawsBackground {
 // smear a haze into the alpha channel.
 if appearance.drawsBackground {
     ctx.saveGState()
+    // A glow that lightens is invisible on the light ground, so there it
+    // warms the birch downwards instead of blooming out of it.
+    let glowColors = appearance.isLightGround
+        ? [rgb(255, 168, 74, 0.42), rgb(255, 150, 60, 0.14), rgb(255, 150, 60, 0)] as CFArray
+        : [rgb(255, 116, 32, 0.50), rgb(255, 110, 30, 0.16), rgb(255, 110, 30, 0)] as CFArray
     let glow = CGGradient(
         colorsSpace: cs,
-        colors: [rgb(255, 116, 32, 0.50), rgb(255, 110, 30, 0.16), rgb(255, 110, 30, 0)] as CFArray,
+        colors: glowColors,
         locations: [0, 0.45, 1]
     )!
     ctx.drawRadialGradient(
@@ -106,14 +126,26 @@ func wavePath(x: CGFloat, bottom: CGFloat, top: CGFloat, amp: CGFloat) -> CGPath
 
 struct Wave { let x: CGFloat; let bottom: CGFloat; let top: CGFloat; let amp: CGFloat; let width: CGFloat; let c0: CGColor; let c1: CGColor }
 
-let waves: [Wave] = [
-    Wave(x: W*0.295, bottom: W*0.635, top: W*0.255, amp: W*0.090, width: W*0.062,
-         c0: rgb(255, 146, 54), c1: rgb(244, 78, 30)),
-    Wave(x: W*0.705, bottom: W*0.635, top: W*0.255, amp: -W*0.090, width: W*0.062,
-         c0: rgb(255, 146, 54), c1: rgb(244, 78, 30)),
-    Wave(x: W*0.50, bottom: W*0.655, top: W*0.150, amp: W*0.112, width: W*0.082,
-         c0: rgb(255, 220, 120), c1: rgb(255, 126, 34)),
-]
+// The bright end of each wave is what a dark ground needs and a light one
+// cannot carry: cream on birch is nearly invisible, so the light ground gets
+// a deeper, more saturated pair that still reads as heat.
+let waves: [Wave] = appearance.isLightGround
+    ? [
+        Wave(x: W*0.295, bottom: W*0.635, top: W*0.255, amp: W*0.090, width: W*0.062,
+             c0: rgb(240, 108, 30), c1: rgb(186, 38, 16)),
+        Wave(x: W*0.705, bottom: W*0.635, top: W*0.255, amp: -W*0.090, width: W*0.062,
+             c0: rgb(240, 108, 30), c1: rgb(186, 38, 16)),
+        Wave(x: W*0.50, bottom: W*0.655, top: W*0.150, amp: W*0.112, width: W*0.082,
+             c0: rgb(255, 150, 40), c1: rgb(206, 52, 18)),
+    ]
+    : [
+        Wave(x: W*0.295, bottom: W*0.635, top: W*0.255, amp: W*0.090, width: W*0.062,
+             c0: rgb(255, 146, 54), c1: rgb(244, 78, 30)),
+        Wave(x: W*0.705, bottom: W*0.635, top: W*0.255, amp: -W*0.090, width: W*0.062,
+             c0: rgb(255, 146, 54), c1: rgb(244, 78, 30)),
+        Wave(x: W*0.50, bottom: W*0.655, top: W*0.150, amp: W*0.112, width: W*0.082,
+             c0: rgb(255, 220, 120), c1: rgb(255, 126, 34)),
+    ]
 
 for w in waves {
     ctx.saveGState()
