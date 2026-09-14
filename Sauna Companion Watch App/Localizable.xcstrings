@@ -1413,6 +1413,202 @@
           }
         }
       }
+    },
+    "Heat and Your Watch" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hitze und deine Uhr"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heat and Your Watch"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuumuus ja kellosi"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Värme och din klocka"
+          }
+        }
+      }
+    },
+    "Apple says Apple Watch Ultra can be worn in a sauna up to 55 °C." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laut Apple darf die Apple Watch Ultra bis 55 °C in der Sauna getragen werden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple says Apple Watch Ultra can be worn in a sauna up to 55 °C."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Applen mukaan Apple Watch Ultraa voi pitää saunassa enintään 55 °C:ssa."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enligt Apple kan Apple Watch Ultra bäras i bastu upp till 55 °C."
+          }
+        }
+      }
+    },
+    "Apple says this Apple Watch should not be worn in a sauna. Only Apple Watch Ultra is made for it, up to 55 °C." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laut Apple sollte diese Apple Watch nicht in der Sauna getragen werden. Dafür gemacht ist nur die Apple Watch Ultra, bis 55 °C."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple says this Apple Watch should not be worn in a sauna. Only Apple Watch Ultra is made for it, up to 55 °C."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Applen mukaan tätä Apple Watchia ei pidä pitää saunassa. Siihen on tehty vain Apple Watch Ultra, enintään 55 °C:seen."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enligt Apple ska den här Apple Watch inte bäras i bastu. Bara Apple Watch Ultra är gjord för det, upp till 55 °C."
+          }
+        }
+      }
+    },
+    "No Apple Watch should be worn in a steam room." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Apple Watch gehört ins Dampfbad."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Apple Watch should be worn in a steam room."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mitään Apple Watchia ei pidä pitää höyrysaunassa."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen Apple Watch ska bäras i ångbastu."
+          }
+        }
+      }
+    },
+    "If your watch gets hot or shows a temperature warning, take it off and let it cool down." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird die Uhr heiss oder zeigt sie eine Temperaturwarnung, nimm sie ab und lass sie abkühlen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If your watch gets hot or shows a temperature warning, take it off and let it cool down."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jos kello kuumenee tai näyttää lämpötilavaroituksen, riisu se ja anna sen jäähtyä."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om klockan blir varm eller visar en temperaturvarning, ta av den och låt den svalna."
+          }
+        }
+      }
+    },
+    "You use Sauna Companion at your own risk. We accept no liability for damage to your Apple Watch." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du nutzt Sauna Companion auf eigene Verantwortung. Für Schäden an deiner Apple Watch übernehmen wir keine Haftung."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You use Sauna Companion at your own risk. We accept no liability for damage to your Apple Watch."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytät Saunakaveria omalla vastuullasi. Emme vastaa Apple Watchillesi aiheutuvista vahingoista."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du använder Bastukompis på egen risk. Vi tar inget ansvar för skador på din Apple Watch."
+          }
+        }
+      }
+    },
+    "I Understand" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verstanden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I Understand"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ymmärrän"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jag förstår"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

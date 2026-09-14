@@ -9,6 +9,12 @@ struct SessionRootView: View {
     @Bindable var store: SessionStore
     private var settings = SettingsStore.shared
 
+    /// Apple's heat limits for the watch have to be accepted once, before
+    /// anything else — which is why the Action button notice waits for it.
+    /// Set only by the button, never by a dismissal.
+    @AppStorage("saunaTracker.hasAcceptedHeatSafety") private var hasAcceptedHeatSafety = false
+    @State private var showingHeatSafety = false
+
     /// The Action button has to be pointed at this app in Settings, which is
     /// worth saying once on the models that have one.
     @AppStorage("saunaTracker.hasSeenActionButtonInfo") private var hasSeenActionButtonInfo = false
@@ -40,6 +46,21 @@ struct SessionRootView: View {
         .onChange(of: settings.settings) { _, newSettings in
             store.applySettings(newSettings)
         }
+        .sheet(isPresented: $showingHeatSafety) {
+            // watchOS shows one sheet at a time, so the Action button notice
+            // follows this one rather than competing with it.
+            showActionButtonInfoIfNeeded()
+        } content: {
+            HeatSafetyView {
+                hasAcceptedHeatSafety = true
+                showingHeatSafety = false
+            }
+            // Accepting is the point of this sheet. Disabling interactive
+            // dismissal stops the swipe but still leaves watchOS's close
+            // button in the corner, so that goes too.
+            .interactiveDismissDisabled()
+            .toolbar(.hidden, for: .navigationBar)
+        }
         .sheet(isPresented: $showingActionButtonInfo) {
             // Also covers a swipe-down dismissal, so it never comes back.
             hasSeenActionButtonInfo = true
@@ -61,8 +82,16 @@ struct SessionRootView: View {
                 }
             }
 
-            showingActionButtonInfo = !hasSeenActionButtonInfo && WatchHardware.hasActionButton
+            if hasAcceptedHeatSafety {
+                showActionButtonInfoIfNeeded()
+            } else {
+                showingHeatSafety = true
+            }
         }
+    }
+
+    private func showActionButtonInfoIfNeeded() {
+        showingActionButtonInfo = !hasSeenActionButtonInfo && WatchHardware.hasActionButton
     }
 }
 

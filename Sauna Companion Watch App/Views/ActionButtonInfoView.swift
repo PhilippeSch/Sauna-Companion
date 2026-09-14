@@ -11,15 +11,18 @@ import SwiftUI
 import WatchKit
 
 enum WatchHardware {
-    /// True on Apple Watch Ultra, the only models with an Action button.
+    /// True on Apple Watch Ultra.
     ///
-    /// There is no API that reports the button, so this goes by the 49 mm
-    /// case, which is Ultra-only. Screen heights in points: Ultra 1 and 2 are
-    /// 251, Ultra 3 is 257, and the largest of the rest — the 46 mm Series 10
-    /// and 11 — is 248.
-    static var hasActionButton: Bool {
+    /// There is no API that reports the model family, so this goes by the
+    /// 49 mm case, which is Ultra-only. Screen heights in points: Ultra 1 and
+    /// 2 are 251, Ultra 3 is 257, and the largest of the rest — the 46 mm
+    /// Series 10 and 11 — is 248.
+    static var isUltra: Bool {
         WKInterfaceDevice.current().screenBounds.height >= 250
     }
+
+    /// The Ultras are the only models with an Action button.
+    static var hasActionButton: Bool { isUltra }
 }
 
 struct ActionButtonInfoView: View {
