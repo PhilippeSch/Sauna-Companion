@@ -1,7 +1,7 @@
 # Sauna Companion
 
 An Apple Watch app for tracking sauna visits, with an iPhone companion for
-statistics and history. Built to be read with wet hands in a hot room: dark,
+statistics and history. Built to be read at a glance with wet hands: dark,
 high contrast, few and large targets.
 
 ## What it does
@@ -25,9 +25,39 @@ sauna — with a rest phase between them.
   sessions, rounds, averages, calories, heart-rate trends, longest session and
   which day and time of day you go most often
 - History with a round-by-round breakdown of every session
-- Notes per session ("Finnish sauna 90 °C, Aufguss menthol")
+- Notes per session ("Finnish sauna, Aufguss menthol")
 - Settings for MET value, body weight override, vibration
 - Swipe left on a session to delete it
+
+## Heat and the watch
+
+Apple rates Apple Watch Ultra for a sauna up to 55 °C, every other model not
+at all, and no model for a steam room — see
+[About Apple Watch water resistance](https://support.apple.com/en-us/109522).
+The app follows that rather than what feels reasonable in a sauna:
+
+- `HeatSafetyView` shows the limit for the model the watch app runs on, and
+  has to be accepted before the first session. Settings keeps it within reach.
+- `ThermalWarning` follows `ProcessInfo.thermalState`. When the watch reports
+  itself `serious` or `critical` during a session, a banner and a tap tell the
+  user to take it off — once for every step it heats up by. The session keeps
+  running.
+
+The simulator cannot heat up, so Debug builds take a stand-in thermal state
+from the user default `SAUNA_DEBUG_THERMAL_STATE` (2 = serious, 3 = critical).
+`xcrun simctl launch` passes neither environment variables nor launch
+arguments to a watch app, so set it inside the running app from lldb and post
+the notification the app listens for:
+
+```
+xcrun lldb --batch -p <pid> \
+  -o 'expr -l objc -- (void)[[NSUserDefaults standardUserDefaults] setObject:@"2" forKey:@"SAUNA_DEBUG_THERMAL_STATE"]' \
+  -o 'expr -l objc -- (void)[[NSNotificationCenter defaultCenter] postNotificationName:@"NSProcessInfoThermalStateDidChangeNotification" object:nil]' \
+  -o 'process detach'
+```
+
+The default stays in the app's container until removed the same way, with
+`removeObjectForKey:`.
 
 ## Action button
 

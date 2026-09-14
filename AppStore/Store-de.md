@@ -15,19 +15,19 @@ Deine Sauna, Runde für Runde
 ## Werbetext (max. 170)
 
 ```
-Grosser Timer, Puls und Rundenzähler — lesbar mit nassen Händen im heissen Raum. Jede Sitzung geht direkt in Apple Health. Kein Konto, kein Server, keine Werbung.
+Grosser Timer, Puls und Rundenzähler, auf einen Blick lesbar. Jede Sitzung geht direkt in Apple Health. Kein Konto, kein Server, keine Werbung.
 ```
 
 ## Schlüsselwörter (max. 100)
 
 ```
-Aufguss,Saunagang,Schwitzen,Dampfbad,Banja,Runden,Puls,Timer,Wellness,Erholung,saunieren
+Aufguss,Saunagang,Schwitzen,finnisch,Banja,Runden,Puls,Timer,Wellness,Erholung,saunieren
 ```
 
 ## Beschreibung (max. 4000)
 
 ```
-Ein Saunabesuch besteht aus Runden. Sauna Companion zählt sie mit — auf der Uhr, im heissen Raum, mit nassen Händen.
+Ein Saunabesuch besteht aus Runden. Sauna Companion zählt sie mit, Runde für Runde, auf deiner Apple Watch.
 
 Auf der Apple Watch läuft ein grosser Timer in der Farbe der Phase: Orange in der Sauna, Türkis in der Pause. Daneben der aktuelle Puls, der höchste Puls der Runde und die laufende Runde. Ein Wisch nach links beendet die Sitzung oder schaltet die Wassersperre ein.
 
@@ -44,8 +44,13 @@ AUF DEM IPHONE
 • Saunazeit, Sitzungen, Runden, Kalorien, Pulsverlauf
 • Längste Sitzung, liebster Wochentag, liebste Tageszeit
 • Verlauf mit jeder einzelnen Runde
-• Notiz pro Sitzung: «Finnische Sauna 90 °C, Aufguss Menthol»
+• Notiz pro Sitzung: «Finnische Sauna, Aufguss Menthol»
 • MET-Wert und Körpergewicht einstellbar
+
+HITZE UND DEINE APPLE WATCH
+Halte dich an Apples Temperaturvorgaben für deine Uhr. Laut Apple darf die Apple Watch Ultra bis 55 °C in der Sauna getragen werden, andere Apple-Watch-Modelle sollten nicht in der Sauna getragen werden, und keine Apple Watch gehört ins Dampfbad. Wird die Uhr heiss oder zeigt sie eine Temperaturwarnung, nimm sie ab und lass sie abkühlen.
+
+Sauna Companion zeigt diese Grenzen vor der ersten Sitzung und warnt dich mit Vibration und auf dem Display, wenn deine Uhr meldet, dass sie überhitzt. Du nutzt die App auf eigene Verantwortung.
 
 ALLES BLEIBT BEI DIR
 Apple Health ist der einzige Speicher. Jede beendete Sitzung wird als Workout gesichert, mit Puls je Runde und geschätztem Kalorienverbrauch; Rundenstruktur und Notiz reisen als Metadaten mit. Die App hat keine eigene Datenbank, kein Konto, keinen Server und keine Werbung, arbeitet vollständig offline und erfasst nichts. Wer eine Sitzung in der App löscht, löscht sie auch in Health.

@@ -11,7 +11,7 @@ body:
         - The app **works offline and stores nothing of its own**. Sessions live
           in Apple Health, there is no account, no server and no analytics —
           that is the point of it, not a gap.
-        - The watch screen is meant to be read **with wet hands in a hot room**.
+        - The watch screen is meant to be read **at a glance, with wet hands**.
           Anything that adds taps, small targets or things to read during a
           session has a high bar to clear.
 

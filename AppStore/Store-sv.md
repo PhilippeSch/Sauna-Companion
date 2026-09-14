@@ -15,19 +15,19 @@ Din bastu, varv för varv
 ## Kampanjtext (max. 170)
 
 ```
-Stor timer, puls och varvräknare — läsbar med våta händer i hettan. Varje pass sparas direkt i Apple Health. Inget konto, ingen server, ingen reklam.
+Stor timer, puls och varvräknare, läsbar med en blick. Varje pass sparas direkt i Apple Health. Inget konto, ingen server, ingen reklam.
 ```
 
 ## Nyckelord (max. 100)
 
 ```
-bastu,basta,bastupass,svettas,ångbastu,varv,puls,timer,välmående,återhämtning,värme
+bastu,basta,bastupass,svettas,finsk,varv,puls,timer,välmående,återhämtning,värme
 ```
 
 ## Beskrivning (max. 4000)
 
 ```
-Ett bastubesök består av varv. Bastukompis räknar dem — på handleden, i hettan, med våta händer.
+Ett bastubesök består av varv. Bastukompis räknar dem, varv för varv, på din Apple Watch.
 
 På Apple Watch löper en stor timer i fasens färg: orange i bastun, turkos under pausen. Bredvid den din puls just nu, varvets högsta puls och vilket varv du är på. Svep åt vänster för att avsluta passet eller slå på vattenlåset.
 
@@ -44,8 +44,13 @@ PÅ IPHONE
 • Bastutid, pass, varv, kalorier, pulsutveckling
 • Längsta passet, favoritveckodag, favorittid på dygnet
 • Historik med varje enskilt varv
-• En anteckning per pass: ”Finsk bastu 90 °C, uppgjutning mentol”
+• En anteckning per pass: ”Finsk bastu, uppgjutning mentol”
 • MET-värde och kroppsvikt går att ställa in
+
+VÄRME OCH DIN APPLE WATCH
+Följ Apples temperaturriktlinjer för din klocka. Enligt Apple kan Apple Watch Ultra bäras i bastu upp till 55 °C, andra Apple Watch-modeller ska inte bäras i bastu, och ingen Apple Watch ska bäras i ångbastu. Om klockan blir varm eller visar en temperaturvarning, ta av den och låt den svalna.
+
+Bastukompis visar dessa gränser före ditt första pass och varnar dig med vibration och på skärmen om klockan rapporterar att den överhettas. Du använder appen på egen risk.
 
 ALLT STANNAR HOS DIG
 Apple Health är den enda lagringsplatsen. Varje avslutat pass sparas som ett träningspass, med puls per varv och beräknad förbrukning; varvstrukturen och anteckningen följer med som metadata. Appen har ingen egen databas, inget konto, ingen server och ingen reklam, fungerar helt offline och samlar inte in något. Raderar du ett pass i appen raderas det även i Health.

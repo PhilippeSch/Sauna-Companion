@@ -15,19 +15,19 @@ Your sauna, round by round
 ## Promotional Text (max. 170)
 
 ```
-A big timer, your pulse and a round counter — readable with wet hands in a hot room. Every session goes straight into Apple Health. No account, no server, no ads.
+A big timer, your pulse and a round counter, readable at a glance. Every session goes straight into Apple Health. No account, no server, no ads.
 ```
 
 ## Keywords (max. 100)
 
 ```
-steam,sweat,banya,löyly,rounds,heart rate,timer,wellness,recovery,heat,session,bathing
+finnish,sweat,banya,löyly,rounds,heart rate,timer,wellness,recovery,heat,session,bathing
 ```
 
 ## Description (max. 4000)
 
 ```
-A sauna visit is made of rounds. Sauna Companion counts them — on your wrist, in the heat, with wet hands.
+A sauna visit is made of rounds. Sauna Companion counts them, round by round, on your Apple Watch.
 
 On Apple Watch a large timer runs in the colour of the phase: orange in the sauna, teal during the rest. Beside it, your current pulse, the highest pulse of the round, and the round you are on. Swipe left to end the session or engage Water Lock.
 
@@ -44,8 +44,13 @@ ON THE IPHONE
 • Sauna time, sessions, rounds, calories, heart-rate trends
 • Longest session, favourite weekday, favourite time of day
 • History with every single round
-• A note per session: "Finnish sauna 90 °C, Aufguss menthol"
+• A note per session: "Finnish sauna, Aufguss menthol"
 • MET value and body weight adjustable
+
+HEAT AND YOUR APPLE WATCH
+Follow Apple's temperature guidance for your watch. Apple says Apple Watch Ultra can be worn in a sauna up to 55 °C, other Apple Watch models should not be worn in a sauna, and no Apple Watch should be worn in a steam room. If your watch gets hot or shows a temperature warning, take it off and let it cool down.
+
+Sauna Companion shows these limits before your first session and warns you, with a tap and on screen, if your watch reports that it is overheating. You use the app at your own risk.
 
 EVERYTHING STAYS WITH YOU
 Apple Health is the only store. Each finished session is written as a workout, with heart rate per round and the estimated energy burned; the round structure and the note ride along as metadata. The app keeps no database of its own, has no account, no server and no advertising, works fully offline and collects nothing. Delete a session in the app and it is deleted in Health too.
