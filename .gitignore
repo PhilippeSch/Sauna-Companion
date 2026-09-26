@@ -3,6 +3,8 @@ DerivedData/
 .DS_Store
 xcuserdata/
 
-# Projektanweisungen, nur lokal
-CLAUDE.md
-.claude/
+# Claude-Code-Anweisungen: nur .claude/CLAUDE.md ist geteilt
+/CLAUDE.md
+/CLAUDE.local.md
+.claude/*
+!.claude/CLAUDE.md
