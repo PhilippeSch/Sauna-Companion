@@ -76,9 +76,9 @@ Localised in English, German, Swedish and Finnish. The repository is public.
 
 ## Project notes
 
-- The simulator cannot heat up and `xcrun simctl launch` passes neither
-  arguments nor environment variables to a watch app; `README.md` ("Heat and
-  the watch") shows how to set the debug thermal state from lldb instead.
+- `xcrun simctl launch` passes neither arguments nor environment variables to
+  a watch app. To put a value into a running watch app, set it from lldb
+  inside the process instead.
 - Heat limits follow Apple's published water-resistance ratings, not what
   feels reasonable in a sauna. Keep app texts and store texts consistent with
   them.

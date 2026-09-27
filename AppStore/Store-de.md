@@ -50,7 +50,7 @@ AUF DEM IPHONE
 HITZE UND DEINE APPLE WATCH
 Halte dich an Apples Temperaturvorgaben für deine Uhr. Laut Apple darf die Apple Watch Ultra bis 55 °C in der Sauna getragen werden, andere Apple-Watch-Modelle sollten nicht in der Sauna getragen werden, und keine Apple Watch gehört ins Dampfbad. Wird die Uhr heiss oder zeigt sie eine Temperaturwarnung, nimm sie ab und lass sie abkühlen.
 
-Sauna Companion zeigt diese Grenzen vor der ersten Sitzung und warnt dich mit Vibration und auf dem Display, wenn deine Uhr meldet, dass sie überhitzt. Du nutzt die App auf eigene Verantwortung.
+Sauna Companion zeigt diese Grenzen vor der ersten Sitzung. Du nutzt die App auf eigene Verantwortung.
 
 ALLES BLEIBT BEI DIR
 Apple Health ist der einzige Speicher. Jede beendete Sitzung wird als Workout gesichert, mit Puls je Runde und geschätztem Kalorienverbrauch; Rundenstruktur und Notiz reisen als Metadaten mit. Die App hat keine eigene Datenbank, kein Konto, keinen Server und keine Werbung, arbeitet vollständig offline und erfasst nichts. Wer eine Sitzung in der App löscht, löscht sie auch in Health.

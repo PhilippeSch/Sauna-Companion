@@ -35,29 +35,8 @@ Apple rates Apple Watch Ultra for a sauna up to 55 °C, every other model not
 at all, and no model for a steam room — see
 [About Apple Watch water resistance](https://support.apple.com/en-us/109522).
 The app follows that rather than what feels reasonable in a sauna:
-
-- `HeatSafetyView` shows the limit for the model the watch app runs on, and
-  has to be accepted before the first session. Settings keeps it within reach.
-- `ThermalWarning` follows `ProcessInfo.thermalState`. When the watch reports
-  itself `serious` or `critical` during a session, a banner and a tap tell the
-  user to take it off — once for every step it heats up by. The session keeps
-  running.
-
-The simulator cannot heat up, so Debug builds take a stand-in thermal state
-from the user default `SAUNA_DEBUG_THERMAL_STATE` (2 = serious, 3 = critical).
-`xcrun simctl launch` passes neither environment variables nor launch
-arguments to a watch app, so set it inside the running app from lldb and post
-the notification the app listens for:
-
-```
-xcrun lldb --batch -p <pid> \
-  -o 'expr -l objc -- (void)[[NSUserDefaults standardUserDefaults] setObject:@"2" forKey:@"SAUNA_DEBUG_THERMAL_STATE"]' \
-  -o 'expr -l objc -- (void)[[NSNotificationCenter defaultCenter] postNotificationName:@"NSProcessInfoThermalStateDidChangeNotification" object:nil]' \
-  -o 'process detach'
-```
-
-The default stays in the app's container until removed the same way, with
-`removeObjectForKey:`.
+`HeatSafetyView` shows the limit for the model the watch app runs on, and has
+to be accepted before the first session. Settings keeps it within reach.
 
 ## Action button
 

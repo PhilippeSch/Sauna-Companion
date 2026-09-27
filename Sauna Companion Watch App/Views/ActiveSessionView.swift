@@ -14,7 +14,6 @@ import SwiftUI
 
 struct ActiveSessionView: View {
     @Bindable var store: SessionStore
-    @Environment(ThermalWarning.self) private var thermalWarning
 
     var body: some View {
         VStack(spacing: 4) {
@@ -36,11 +35,7 @@ struct ActiveSessionView: View {
             roundIndicator
             heartRateBlock
 
-            // One warning line fits under the pulse on the smallest case, and
-            // a watch that is too hot outranks a session Health will not get.
-            if thermalWarning.isOverheating {
-                overheatingWarning
-            } else if !store.isRecordingToHealth {
+            if !store.isRecordingToHealth {
                 notRecordingWarning
             }
 
@@ -103,16 +98,6 @@ struct ActiveSessionView: View {
         .lineLimit(1)
         .minimumScaleFactor(0.7)
         .padding(.horizontal, 4)
-    }
-
-    private var overheatingWarning: some View {
-        Label("Watch too hot — take it off", systemImage: "thermometer.sun.fill")
-            .font(.system(size: 11, weight: .semibold))
-            .foregroundStyle(.red)
-            .lineLimit(2)
-            .minimumScaleFactor(0.8)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 4)
     }
 
     private var notRecordingWarning: some View {

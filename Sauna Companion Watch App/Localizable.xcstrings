@@ -1609,34 +1609,6 @@
           }
         }
       }
-    },
-    "Watch too hot — take it off" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uhr zu heiss — abnehmen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Watch too hot — take it off"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kello liian kuuma — riisu se"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Klockan för varm — ta av den"
-          }
-        }
-      }
     }
   },
   "version" : "1.0"

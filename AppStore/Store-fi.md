@@ -50,7 +50,7 @@ IPHONESSA
 KUUMUUS JA APPLE WATCHISI
 Noudata Applen lämpötilaohjeita kellollesi. Applen mukaan Apple Watch Ultraa voi pitää saunassa enintään 55 °C:ssa, muita Apple Watch -malleja ei pidä pitää saunassa, eikä mitään Apple Watchia pidä pitää höyrysaunassa. Jos kello kuumenee tai näyttää lämpötilavaroituksen, riisu se ja anna sen jäähtyä.
 
-Saunakaveri näyttää nämä rajat ennen ensimmäistä saunakertaa ja varoittaa värinällä ja näytöllä, jos kello ilmoittaa ylikuumenevansa. Käytät sovellusta omalla vastuullasi.
+Saunakaveri näyttää nämä rajat ennen ensimmäistä saunakertaa. Käytät sovellusta omalla vastuullasi.
 
 KAIKKI PYSYY SINULLA
 Apple Health on ainoa tallennuspaikka. Jokainen päättynyt kerta tallentuu treeninä, mukana kierroskohtainen syke ja arvioitu kulutus; kierrosrakenne ja muistiinpano kulkevat metatietoina mukana. Sovelluksella ei ole omaa tietokantaa, tiliä, palvelinta eikä mainoksia, se toimii täysin verkotta eikä kerää mitään. Kun poistat kerran sovelluksessa, se poistuu myös Healthista.
