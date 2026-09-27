@@ -50,7 +50,7 @@ PÅ IPHONE
 VÄRME OCH DIN APPLE WATCH
 Följ Apples temperaturriktlinjer för din klocka. Enligt Apple kan Apple Watch Ultra bäras i bastu upp till 55 °C, andra Apple Watch-modeller ska inte bäras i bastu, och ingen Apple Watch ska bäras i ångbastu. Om klockan blir varm eller visar en temperaturvarning, ta av den och låt den svalna.
 
-Bastukompis visar dessa gränser före ditt första pass. Du använder appen på egen risk.
+Före ditt första pass ber Bastukompis dig att godkänna dessa gränser. Du använder appen på egen risk.
 
 ALLT STANNAR HOS DIG
 Apple Health är den enda lagringsplatsen. Varje avslutat pass sparas som ett träningspass, med puls per varv och beräknad förbrukning; varvstrukturen och anteckningen följer med som metadata. Appen har ingen egen databas, inget konto, ingen server och ingen reklam, fungerar helt offline och samlar inte in något. Raderar du ett pass i appen raderas det även i Health.

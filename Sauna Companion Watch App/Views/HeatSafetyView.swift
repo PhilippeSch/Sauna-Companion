@@ -3,13 +3,15 @@
 //  Sauna Companion Watch App
 //
 //  Shown before anything else on first launch, and again from settings on
-//  request. Apple rates most Apple Watch models not to be worn in a sauna at
-//  all and Ultra only up to 55 °C, and App Review rejected the app under
-//  guideline 2.4.2 for encouraging use that could damage the watch.
+//  request. The user has to accept wearing the watch only within Apple's
+//  limits before the app can be used; whether they keep to them is theirs to
+//  decide, and the app does not check.
 //
-//  The limits are Apple's own, from "About Apple Watch water resistance"
-//  (support.apple.com/109522). Keep the wording in step with that page rather
-//  than with what feels reasonable in a sauna.
+//  The limits are Apple's own: Ultra in a sauna up to 55 °C, from "About Apple
+//  Watch water resistance" (support.apple.com/109522), and 35 °C for every
+//  other model, the top of its operating range (support.apple.com/108766).
+//  Keep the wording in step with those pages rather than with what feels
+//  reasonable in a sauna.
 //
 
 import SwiftUI
@@ -27,6 +29,10 @@ struct HeatSafetyView: View {
                 Text("Heat and Your Watch")
                     .font(.headline)
 
+                Text("By tapping Accept, you agree to wear your Apple Watch only within these limits:")
+                    .font(.system(size: 13))
+                    .foregroundStyle(.secondary)
+
                 modelLimit
                     .font(.system(size: 13, weight: .semibold))
                     .padding(8)
@@ -43,7 +49,7 @@ struct HeatSafetyView: View {
                     .font(.system(size: 11))
                     .foregroundStyle(.secondary)
 
-                Button("I Understand", action: onAccept)
+                Button("Accept", action: onAccept)
                     .buttonStyle(.borderedProminent)
                     .tint(.orange)
                     .padding(.top, 4)
@@ -58,9 +64,9 @@ struct HeatSafetyView: View {
     @ViewBuilder
     private var modelLimit: some View {
         if WatchHardware.isUltra {
-            Text("Apple says Apple Watch Ultra can be worn in a sauna up to 55 °C.")
+            Text("Apple Watch Ultra: in a sauna up to 55 °C at most.")
         } else {
-            Text("Apple says this Apple Watch should not be worn in a sauna. Only Apple Watch Ultra is made for it, up to 55 °C.")
+            Text("This Apple Watch: up to 35 °C at most — Apple does not rate it for a sauna.")
         }
     }
 }

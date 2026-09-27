@@ -1442,62 +1442,6 @@
         }
       }
     },
-    "Apple says Apple Watch Ultra can be worn in a sauna up to 55 °C." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laut Apple darf die Apple Watch Ultra bis 55 °C in der Sauna getragen werden."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple says Apple Watch Ultra can be worn in a sauna up to 55 °C."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Applen mukaan Apple Watch Ultraa voi pitää saunassa enintään 55 °C:ssa."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enligt Apple kan Apple Watch Ultra bäras i bastu upp till 55 °C."
-          }
-        }
-      }
-    },
-    "Apple says this Apple Watch should not be worn in a sauna. Only Apple Watch Ultra is made for it, up to 55 °C." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laut Apple sollte diese Apple Watch nicht in der Sauna getragen werden. Dafür gemacht ist nur die Apple Watch Ultra, bis 55 °C."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple says this Apple Watch should not be worn in a sauna. Only Apple Watch Ultra is made for it, up to 55 °C."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Applen mukaan tätä Apple Watchia ei pidä pitää saunassa. Siihen on tehty vain Apple Watch Ultra, enintään 55 °C:seen."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enligt Apple ska den här Apple Watch inte bäras i bastu. Bara Apple Watch Ultra är gjord för det, upp till 55 °C."
-          }
-        }
-      }
-    },
     "No Apple Watch should be worn in a steam room." : {
       "localizations" : {
         "de" : {
@@ -1582,30 +1526,114 @@
         }
       }
     },
-    "I Understand" : {
+    "By tapping Accept, you agree to wear your Apple Watch only within these limits:" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Verstanden"
+            "value" : "Mit «Akzeptieren» sagst du zu, deine Apple Watch nur innerhalb dieser Grenzen zu tragen:"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "I Understand"
+            "value" : "By tapping Accept, you agree to wear your Apple Watch only within these limits:"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ymmärrän"
+            "value" : "Napauttamalla Hyväksy sitoudut pitämään Apple Watchiasi vain näissä rajoissa:"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jag förstår"
+            "value" : "Genom att trycka på Godkänn lovar du att bara bära din Apple Watch inom dessa gränser:"
+          }
+        }
+      }
+    },
+    "Apple Watch Ultra: in a sauna up to 55 °C at most." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch Ultra: in der Sauna höchstens bis 55 °C."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch Ultra: in a sauna up to 55 °C at most."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch Ultra: saunassa enintään 55 °C."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch Ultra: i bastu högst upp till 55 °C."
+          }
+        }
+      }
+    },
+    "This Apple Watch: up to 35 °C at most — Apple does not rate it for a sauna." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Apple Watch: höchstens bis 35 °C — Apple sieht sie nicht für die Sauna vor."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This Apple Watch: up to 35 °C at most — Apple does not rate it for a sauna."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tämä Apple Watch: enintään 35 °C — Apple ei ole tarkoittanut sitä saunaan."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Den här Apple Watch: högst upp till 35 °C — Apple har inte klassat den för bastu."
+          }
+        }
+      }
+    },
+    "Accept" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akzeptieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accept"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hyväksy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Godkänn"
           }
         }
       }

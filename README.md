@@ -34,9 +34,13 @@ sauna — with a rest phase between them.
 Apple rates Apple Watch Ultra for a sauna up to 55 °C, every other model not
 at all, and no model for a steam room — see
 [About Apple Watch water resistance](https://support.apple.com/en-us/109522).
-The app follows that rather than what feels reasonable in a sauna:
-`HeatSafetyView` shows the limit for the model the watch app runs on, and has
-to be accepted before the first session. Settings keeps it within reach.
+The app follows that rather than what feels reasonable in a sauna: before
+the first session, `HeatSafetyView` asks the user to accept the limit for the
+model the watch app runs on — 55 °C in a sauna for Ultra, and for every other
+model 35 °C, the top of its
+[operating range](https://support.apple.com/en-us/108766). Whether they keep
+to it is up to them; the app does not check. Settings keeps the notice within
+reach.
 
 ## Action button
 
