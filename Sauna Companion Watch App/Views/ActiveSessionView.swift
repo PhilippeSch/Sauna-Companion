@@ -35,7 +35,7 @@ struct ActiveSessionView: View {
             roundIndicator
             heartRateBlock
 
-            if !store.isRecordingToHealth {
+            if store.showsNotRecordingWarning {
                 notRecordingWarning
             }
 

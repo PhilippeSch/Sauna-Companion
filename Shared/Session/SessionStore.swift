@@ -45,6 +45,15 @@ final class SessionStore {
     /// still runs locally, but nothing will land in Health, and the UI says so.
     var isRecordingToHealth: Bool { recorder.isRecording }
 
+    /// True while the live workout is still being brought up. That takes a
+    /// second or two, and "not recording yet" during it is no failure —
+    /// treating it as one flashed the warning at the start of every session.
+    private(set) var isStartingRecording = false
+
+    /// Whether to tell the user the session is not reaching Health: only once
+    /// the start has finished and failed, never while it is still under way.
+    var showsNotRecordingWarning: Bool { !isStartingRecording && !isRecordingToHealth }
+
     /// Total sauna time so far, including the round currently running.
     var totalSaunaDurationSoFar: TimeInterval {
         let closed = intervals.filter { $0.phase == .sauna }.reduce(0) { $0 + $1.duration }
@@ -115,7 +124,9 @@ final class SessionStore {
         roundCount = 0
         lastErrorDescription = nil
         stage = .active
+        isStartingRecording = true
         await recorder.startWorkoutSession(startDate: start)
+        isStartingRecording = false
         // Starts at `start`, not "now": bringing up the HealthKit session
         // takes about a second, and the first round has to line up with the
         // session it belongs to rather than trail it.

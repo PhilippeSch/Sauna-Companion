@@ -131,6 +131,32 @@ struct SessionStoreTests {
         #expect(session?.startDate == session?.intervals.first?.startDate)
     }
 
+    @Test func noHealthWarningWhileHealthKitIsStillStarting() async throws {
+        let (store, recorder, _) = StoreFactory.make()
+        recorder.startDelay = .milliseconds(300)
+
+        let starting = Task { await store.startSession() }
+        try await Task.sleep(for: .milliseconds(100))
+
+        // Mid-start the session is already on screen and HealthKit is not up
+        // yet. That is expected, not something to warn about.
+        #expect(store.isActive)
+        #expect(store.isRecordingToHealth == false)
+        #expect(store.showsNotRecordingWarning == false)
+
+        await starting.value
+        #expect(store.showsNotRecordingWarning == false, "a start that worked never warns")
+    }
+
+    @Test func healthWarningShowsOnceTheStartHasFailed() async {
+        let (store, recorder, _) = StoreFactory.make()
+        recorder.startSucceeds = false
+
+        await store.startSession()
+
+        #expect(store.showsNotRecordingWarning)
+    }
+
     @Test func totalsAgreeAtTheStartOfASession() async {
         let (store, _, _) = StoreFactory.make()
         await store.startSession()

@@ -68,7 +68,8 @@ enum Fixture {
 
 @MainActor
 final class FakeRecorder: SessionRecording {
-    var isRecording = true
+    /// Like the real recorder: not recording until a workout has started.
+    var isRecording = false
     var onHeartRateUpdate: ((Double) -> Void)?
 
     private(set) var startCallCount = 0
