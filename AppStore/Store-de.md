@@ -21,13 +21,13 @@ Grosser Timer, Puls und Rundenzähler, auf einen Blick lesbar. Jede Sitzung geht
 ## Schlüsselwörter (max. 100)
 
 ```
-Aufguss,Saunagang,Schwitzen,finnisch,Banja,Runden,Puls,Timer,Wellness,Erholung,saunieren
+Infrarot,Infrarotkabine,Saunagang,Schwitzen,Runden,Puls,Timer,Wellness,Erholung,saunieren,Ultra
 ```
 
 ## Beschreibung (max. 4000)
 
 ```
-Ein Saunabesuch besteht aus Runden. Sauna Companion zählt sie mit, Runde für Runde, auf deiner Apple Watch.
+Ein Saunabesuch besteht aus Runden. Sauna Companion zählt sie mit, Runde für Runde, auf deiner Apple Watch Ultra.
 
 Auf der Apple Watch läuft ein grosser Timer in der Farbe der Phase: Orange in der Sauna, Türkis in der Pause. Daneben der aktuelle Puls, der höchste Puls der Runde und die laufende Runde. Ein Wisch nach links beendet die Sitzung oder schaltet die Wassersperre ein.
 
@@ -44,13 +44,13 @@ AUF DEM IPHONE
 • Saunazeit, Sitzungen, Runden, Kalorien, Pulsverlauf
 • Längste Sitzung, liebster Wochentag, liebste Tageszeit
 • Verlauf mit jeder einzelnen Runde
-• Notiz pro Sitzung: «Finnische Sauna, Aufguss Menthol»
+• Notiz pro Sitzung: «Infrarotkabine 50 °C, Eukalyptus»
 • MET-Wert und Körpergewicht einstellbar
 
 HITZE UND DEINE APPLE WATCH
-Halte dich an Apples Temperaturvorgaben für deine Uhr. Laut Apple darf die Apple Watch Ultra bis 55 °C in der Sauna getragen werden, andere Apple-Watch-Modelle sollten nicht in der Sauna getragen werden, und keine Apple Watch gehört ins Dampfbad. Wird die Uhr heiss oder zeigt sie eine Temperaturwarnung, nimm sie ab und lass sie abkühlen.
+Apple sieht die Apple Watch Ultra in der Sauna bis 55 °C vor und kein anderes Apple-Watch-Modell überhaupt. Sauna Companion führt Saunasitzungen deshalb nur auf der Apple Watch Ultra durch und bittet dich vor der ersten Sitzung, diese Grenze zu akzeptieren. Infrarotkabinen lassen sich innerhalb dieser Grenze betreiben; eine finnische Sauna mit 80 bis 100 °C liegt weit darüber. Keine Apple Watch gehört ins Dampfbad. Wird die Uhr heiss oder zeigt sie eine Temperaturwarnung, nimm sie ab und lass sie abkühlen.
 
-Vor der ersten Sitzung bittet dich Sauna Companion, diese Grenzen zu akzeptieren. Du nutzt die App auf eigene Verantwortung.
+Du nutzt die App auf eigene Verantwortung.
 
 ALLES BLEIBT BEI DIR
 Apple Health ist der einzige Speicher. Jede beendete Sitzung wird als Workout gesichert, mit Puls je Runde und geschätztem Kalorienverbrauch; Rundenstruktur und Notiz reisen als Metadaten mit. Die App hat keine eigene Datenbank, kein Konto, keinen Server und keine Werbung, arbeitet vollständig offline und erfasst nichts. Wer eine Sitzung in der App löscht, löscht sie auch in Health.

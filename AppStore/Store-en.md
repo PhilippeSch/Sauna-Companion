@@ -21,13 +21,13 @@ A big timer, your pulse and a round counter, readable at a glance. Every session
 ## Keywords (max. 100)
 
 ```
-finnish,sweat,banya,löyly,rounds,heart rate,timer,wellness,recovery,heat,session,bathing
+infrared,sweat,rounds,heart rate,timer,wellness,recovery,heat,session,bathing,ultra,cabin
 ```
 
 ## Description (max. 4000)
 
 ```
-A sauna visit is made of rounds. Sauna Companion counts them, round by round, on your Apple Watch.
+A sauna visit is made of rounds. Sauna Companion counts them, round by round, on your Apple Watch Ultra.
 
 On Apple Watch a large timer runs in the colour of the phase: orange in the sauna, teal during the rest. Beside it, your current pulse, the highest pulse of the round, and the round you are on. Swipe left to end the session or engage Water Lock.
 
@@ -44,13 +44,13 @@ ON THE IPHONE
 • Sauna time, sessions, rounds, calories, heart-rate trends
 • Longest session, favourite weekday, favourite time of day
 • History with every single round
-• A note per session: "Finnish sauna, Aufguss menthol"
+• A note per session: "Infrared cabin 50 °C, eucalyptus"
 • MET value and body weight adjustable
 
 HEAT AND YOUR APPLE WATCH
-Follow Apple's temperature guidance for your watch. Apple says Apple Watch Ultra can be worn in a sauna up to 55 °C, other Apple Watch models should not be worn in a sauna, and no Apple Watch should be worn in a steam room. If your watch gets hot or shows a temperature warning, take it off and let it cool down.
+Apple rates Apple Watch Ultra for a sauna up to 55 °C, and no other Apple Watch model for a sauna at all. Sauna Companion therefore runs sauna sessions on Apple Watch Ultra only, and asks you to accept that limit before your first session. Infrared cabins can be run within it; a Finnish sauna at 80 to 100 °C is far above it. No Apple Watch belongs in a steam room. If your watch gets hot or shows a temperature warning, take it off and let it cool down.
 
-Before your first session, Sauna Companion asks you to accept these limits. You use the app at your own risk.
+You use the app at your own risk.
 
 EVERYTHING STAYS WITH YOU
 Apple Health is the only store. Each finished session is written as a workout, with heart rate per round and the estimated energy burned; the round structure and the note ride along as metadata. The app keeps no database of its own, has no account, no server and no advertising, works fully offline and collects nothing. Delete a session in the app and it is deleted in Health too.

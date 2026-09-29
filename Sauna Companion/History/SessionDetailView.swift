@@ -82,7 +82,7 @@ struct SessionDetailView: View {
                     // The note travels with the workout in Health, but Health
                     // and Fitness never render third-party workout metadata,
                     // so say plainly where it will and will not show up.
-                    Text("For example: Finnish sauna, Aufguss menthol.\nStored with the session, visible only in Sauna Companion.")
+                    Text("For example: Infrared cabin 50 °C, eucalyptus.\nStored with the session, visible only in Sauna Companion.")
                 }
             }
         }
