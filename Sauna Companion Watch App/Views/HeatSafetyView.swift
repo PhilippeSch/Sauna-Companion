@@ -3,15 +3,14 @@
 //  Sauna Companion Watch App
 //
 //  Shown before anything else on first launch, and again from settings on
-//  request. The user has to accept wearing the watch only within Apple's
-//  limits before the app can be used; whether they keep to them is theirs to
-//  decide, and the app does not check.
+//  request. Sessions only run on Apple Watch Ultra, so this is the Ultra's
+//  limit: the user has to accept wearing it only up to 55 °C before the app
+//  can be used. Whether they keep to it is theirs to decide; the app does not
+//  check.
 //
-//  The limits are Apple's own: Ultra in a sauna up to 55 °C, from "About Apple
-//  Watch water resistance" (support.apple.com/109522), and 35 °C for every
-//  other model, the top of its operating range (support.apple.com/108766).
-//  Keep the wording in step with those pages rather than with what feels
-//  reasonable in a sauna.
+//  The limit is Apple's own, from "About Apple Watch water resistance"
+//  (support.apple.com/109522). Keep the wording in step with that page rather
+//  than with what feels reasonable in a sauna.
 //
 
 import SwiftUI
@@ -33,11 +32,14 @@ struct HeatSafetyView: View {
                     .font(.system(size: 13))
                     .foregroundStyle(.secondary)
 
-                modelLimit
+                Text("Apple Watch Ultra: in a sauna up to 55 °C at most.")
                     .font(.system(size: 13, weight: .semibold))
                     .padding(8)
                     .frame(maxWidth: .infinity)
                     .background(Color.orange.opacity(0.18), in: .rect(cornerRadius: 8))
+
+                Text("Infrared cabins can be run within this limit; a Finnish sauna at 80–100 °C is far above it.")
+                    .font(.system(size: 13))
 
                 Text("No Apple Watch should be worn in a steam room.")
                     .font(.system(size: 13))
@@ -56,17 +58,6 @@ struct HeatSafetyView: View {
             }
             .multilineTextAlignment(.center)
             .padding(.horizontal, 4)
-        }
-    }
-
-    /// Apple's limit for the model this runs on. Two literal `Text`s rather
-    /// than one with a computed key, so string extraction sees both.
-    @ViewBuilder
-    private var modelLimit: some View {
-        if WatchHardware.isUltra {
-            Text("Apple Watch Ultra: in a sauna up to 55 °C at most.")
-        } else {
-            Text("This Apple Watch: up to 35 °C at most — Apple does not rate it for a sauna.")
         }
     }
 }

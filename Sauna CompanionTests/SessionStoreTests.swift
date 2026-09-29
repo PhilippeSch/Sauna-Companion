@@ -131,6 +131,18 @@ struct SessionStoreTests {
         #expect(session?.startDate == session?.intervals.first?.startDate)
     }
 
+    @Test func noSessionStartsOnAWatchNotRatedForASauna() async {
+        let (store, recorder, haptics) = StoreFactory.make(supportsSessions: false)
+
+        await store.startSession()
+
+        // Every model but Ultra: the start is refused before anything runs,
+        // so there is no workout, no timer and no reminder taps either.
+        #expect(store.isActive == false)
+        #expect(recorder.startCallCount == 0)
+        #expect(haptics.startCallCount == 0)
+    }
+
     @Test func noHealthWarningWhileHealthKitIsStillStarting() async throws {
         let (store, recorder, _) = StoreFactory.make()
         recorder.startDelay = .milliseconds(300)

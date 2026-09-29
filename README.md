@@ -25,7 +25,7 @@ sauna — with a rest phase between them.
   sessions, rounds, averages, calories, heart-rate trends, longest session and
   which day and time of day you go most often
 - History with a round-by-round breakdown of every session
-- Notes per session ("Finnish sauna, Aufguss menthol")
+- Notes per session ("Infrared cabin 50 °C, eucalyptus")
 - Settings for MET value, body weight override, vibration
 - Swipe left on a session to delete it
 
@@ -34,13 +34,15 @@ sauna — with a rest phase between them.
 Apple rates Apple Watch Ultra for a sauna up to 55 °C, every other model not
 at all, and no model for a steam room — see
 [About Apple Watch water resistance](https://support.apple.com/en-us/109522).
-The app follows that rather than what feels reasonable in a sauna: before
-the first session, `HeatSafetyView` asks the user to accept the limit for the
-model the watch app runs on — 55 °C in a sauna for Ultra, and for every other
-model 35 °C, the top of its
-[operating range](https://support.apple.com/en-us/108766). Whether they keep
-to it is up to them; the app does not check. Settings keeps the notice within
-reach.
+The app follows that rather than what feels reasonable in a sauna. Sauna
+sessions run on Apple Watch Ultra only: `SessionStore` is created with
+`supportsSessions` from `WatchHardware.isUltra`, and on every other model no
+start gets through — not the button, not an App Intent, not a start the Action
+button left pending — while the start screen says why. On Ultra,
+`HeatSafetyView` asks the user to accept the 55 °C limit before the first
+session; infrared cabins can be run within it, a Finnish sauna cannot. Whether
+they keep to it is up to them; the app does not check. Settings keeps the
+notice within reach.
 
 ## Action button
 
@@ -99,8 +101,9 @@ weight comes from Health unless overridden in settings.
 ## Requirements
 
 - watchOS 26.5, iOS 26.5, Xcode 26
-- Apple Watch Ultra for the Action button; every other feature runs on any
-  watch that meets the watchOS requirement above
+- Apple Watch Ultra for sauna sessions and the Action button. On other
+  models the watch app explains that sessions need an Ultra; the iPhone app
+  still shows the history
 
 ## Build
 

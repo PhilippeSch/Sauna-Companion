@@ -82,7 +82,8 @@ struct SessionRootView: View {
                 }
             }
 
-            if hasAcceptedHeatSafety {
+            // Only a watch that can run a session has a limit to accept.
+            if hasAcceptedHeatSafety || !store.supportsSessions {
                 showActionButtonInfoIfNeeded()
             } else {
                 showingHeatSafety = true

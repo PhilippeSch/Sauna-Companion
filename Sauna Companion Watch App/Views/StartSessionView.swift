@@ -23,15 +23,25 @@ struct StartSessionView: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
 
-            Button {
-                Task { await store.startSession() }
-            } label: {
-                Text("Start Sauna")
-                    .font(.system(size: 16, weight: .semibold))
-                    .frame(maxWidth: .infinity, minHeight: 50)
+            if store.supportsSessions {
+                Button {
+                    Task { await store.startSession() }
+                } label: {
+                    Text("Start Sauna")
+                        .font(.system(size: 16, weight: .semibold))
+                        .frame(maxWidth: .infinity, minHeight: 50)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.orange)
+            } else {
+                // Every model but Ultra: say why there is no Start button
+                // rather than leave the screen looking broken.
+                Text("Sauna sessions need Apple Watch Ultra — the only Apple Watch that Apple rates for a sauna, up to 55 °C.")
+                    .font(.system(size: 13))
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(.orange)
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

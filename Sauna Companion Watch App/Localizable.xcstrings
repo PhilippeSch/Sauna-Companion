@@ -1582,34 +1582,6 @@
         }
       }
     },
-    "This Apple Watch: up to 35 °C at most — Apple does not rate it for a sauna." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Diese Apple Watch: höchstens bis 35 °C — Apple sieht sie nicht für die Sauna vor."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This Apple Watch: up to 35 °C at most — Apple does not rate it for a sauna."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tämä Apple Watch: enintään 35 °C — Apple ei ole tarkoittanut sitä saunaan."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Den här Apple Watch: högst upp till 35 °C — Apple har inte klassat den för bastu."
-          }
-        }
-      }
-    },
     "Accept" : {
       "localizations" : {
         "de" : {
@@ -1634,6 +1606,62 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Godkänn"
+          }
+        }
+      }
+    },
+    "Sauna sessions need Apple Watch Ultra — the only Apple Watch that Apple rates for a sauna, up to 55 °C." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saunasitzungen brauchen eine Apple Watch Ultra — die einzige Apple Watch, die Apple für die Sauna vorsieht, bis 55 °C."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauna sessions need Apple Watch Ultra — the only Apple Watch that Apple rates for a sauna, up to 55 °C."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saunakerrat vaativat Apple Watch Ultran — ainoan Apple Watchin, jonka Apple on tarkoittanut saunaan, enintään 55 °C:seen."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bastupass kräver Apple Watch Ultra — den enda Apple Watch som Apple har klassat för bastu, upp till 55 °C."
+          }
+        }
+      }
+    },
+    "Infrared cabins can be run within this limit; a Finnish sauna at 80–100 °C is far above it." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infrarotkabinen lassen sich innerhalb dieser Grenze betreiben; eine finnische Sauna mit 80–100 °C liegt weit darüber."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infrared cabins can be run within this limit; a Finnish sauna at 80–100 °C is far above it."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infrapunasaunat voi pitää tämän rajan sisällä; suomalainen sauna 80–100 °C:ssa on reilusti sen yli."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infraröda bastur kan köras inom den här gränsen; en finsk bastu på 80–100 °C ligger långt över den."
           }
         }
       }

@@ -82,3 +82,6 @@ Localised in English, German, Swedish and Finnish. The repository is public.
 - Heat limits follow Apple's published water-resistance ratings, not what
   feels reasonable in a sauna. Keep app texts and store texts consistent with
   them.
+- Sauna sessions run on Apple Watch Ultra only, the one model Apple rates for
+  a sauna (up to 55 °C). The listing points at saunas within that limit, such
+  as infrared cabins, not at a Finnish sauna.
